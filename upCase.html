@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <script src="angular.min.js"> </script>
+    <script src="upCase.js"></script>
+</head>
+<body ng-controller="myController">
+                   When the input box looses focus, the text should become Upper Case.
+<br><br>
+                        <input type="text" ng-model="name" ng-blur ="upCase();">
+</body>
+</html>

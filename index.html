@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <script src="angular.min.js"> </script>
+    <script src="scope.js"></script>
 </head>
 <body>
-        <h1>This is the first file. I am thrilled!
-        </h1>
+<div ng-controller="myController">
+        <h1>This is the first file we built. I am thrilled!! This is an update</h1>
+
+     <!--As the scope is bound to controller, and that controller is incharge of the dive here,
+    name is displayed-->
+
+       {{name}}
+<br>
+    {{sayHello()}}
+    <br>
+     <!--I want the value of this input box always to point to something on scope called fullName. so ng-model is used! -->
+    <input type="text" ng-model="fullName">
+    <br>
+    {{fullName}}
+
+</div>
 </body>
 </html>

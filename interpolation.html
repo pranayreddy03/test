@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "myApp">
+<head>
+    <script src="angular.min.js"> </script>
+    <script src="interpolation.js"></script>
+</head>
+<body ng-controller="myController">
+                   <h1> Usage of binding expressions in attributes and usage of ng-src</h1>
+
+                   <button ng-click="toggle()" >Click here</button> <br>
+                  <img ng-src="images/{{msg}}.jpg" style="width:150px; height:150px">
+</body>
+</html>
