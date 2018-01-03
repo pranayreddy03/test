@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shoppingList">
+<head>
+    <script src="angular.min.js"></script>
+    <script src="TwoWayDataBinding.js"></script>
+</head>
+<body ng-controller="shoppingController">
+
+                <h3>Shopping1</h3>
+              <ul>
+                  <li ng-repeat="item in shopping1">{{item}}</li>
+              </ul>
+
+               <h3>Shopping2</h3>
+                 <ul>
+                     <li ng-repeat="item in shopping2">
+                         {{item.quantity}} of {{item.name}}(s).
+                     </li>
+                 </ul>
+
+          <input type="text" placeholder="enter name" ng-model="newItemName"><br>
+          <input type="number" placeholder="enter quantity" ng-model="newItemQuantity"><br>
+          <button ng-click="add()">Add to the list</button>
+</body>
+</html>
