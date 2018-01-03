@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Implementing Custom Services</title>
+    <script src="angular.min.js"></script>
+    <script src="CustomService.js"></script>
+
+</head>
+<body>
+    <h1>Implementing Custom Services in AngularJS</h1>
+
+    <div ng-controller="ShoppingListAddController as AddCtrl">
+        <input type="text" ng-model="AddCtrl.itemName" placeholder="Enter Item Name">
+        <input type="number" ng-model="AddCtrl.itemQuantity" placeholder="Enter Item Quantity">
+        <button ng-click="AddCtrl.addItem()">Add Items to the list</button>
+    </div>
+
+    <div ng-controller="ShoppingListShowController as ShowCtrl">
+        <ol>
+            <li ng-repeat="item in ShowCtrl.items">
+                {{item.quantity}} of {{item.name}}(s)
+                <button ng-click="ShowCtrl.removeItem($index)">Remove Item</button>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
